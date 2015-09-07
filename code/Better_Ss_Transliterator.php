@@ -1,7 +1,5 @@
 <?php
 
-use Cocur\Slugify\Slugify;
-
 class Better_Ss_Transliterator extends Object {
 
     /**
