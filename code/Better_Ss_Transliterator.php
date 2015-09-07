@@ -9,7 +9,7 @@ class Better_Ss_Transliterator extends Object {
 
     public function toASCII($source) {
         if (!self::$slugify) {
-            self::$slugify = new Slugify();
+            self::$slugify = new Cocur_Slugify();
             $rulesets = $this->config()->get('rulesets');
             if (is_array($rulesets)) {
                 foreach($rulesets as $name => $ruleset) {
