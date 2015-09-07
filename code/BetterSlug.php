@@ -1,6 +1,6 @@
 <?php
 
-class Better_Ss_Transliterator extends Object {
+class BetterSlug extends Object {
 
     /**
      * @var Slugify
