@@ -19,12 +19,23 @@ Istead of **page-41** like before.
 
 In case some characters are not handled, you can further configure module by add your own translation rules. For example:
 
+**_config.yml**
 ````
 BetterSlug:
+  rulesets:
     symbols:
-        active: true
-        map:
-            ☂: ubrella
-            ☁: cloud
+      active: true
+      map:
+        ☂: ubrella
+        ☁: cloud
 ````
 
+This will turn:
+````
+When you see dark ☁, bring an ☂!
+````
+
+Into:
+````
+when-you-see-dark-cloud-bring-an-ubrella
+````

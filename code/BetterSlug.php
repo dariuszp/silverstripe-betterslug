@@ -3,7 +3,7 @@
 class BetterSlug extends Object {
 
     /**
-     * @var Slugify
+     * @var Cocur_Slugify
      */
     protected static $slugify;
 
@@ -19,7 +19,7 @@ class BetterSlug extends Object {
                     if (!(isset($ruleset['map']) && is_array($ruleset['map']))) {
                         throw new \Exception('Ruleset map must be an array');
                     }
-                    self::$slugify->addRuleset($name, $ruleset);
+                    self::$slugify->addRuleset($name, $ruleset['map']);
                     $isActive = (isset($ruleset['active']) && $ruleset['active']) ? true : false;
                     if ($isActive) {
                         self::$slugify->activateRuleset($name);
