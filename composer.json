@@ -1,6 +1,8 @@
 {
     "name": "dariuszp/silverstripe-betterslug",
     "description": "Better slug transliterator for Silverstripe with accent folding",
+    "keywords": ["silverstripe", "slug", "SS_Transliterator", "accent", "folding"],
+    "homepage": "https://github.com/dariuszp/silverstripe-betterslug",
     "type": "silverstripe-module",
     "require": {
         "php": ">=5.3.2"
@@ -10,6 +12,10 @@
         {
             "name": "Dariusz Półtorak",
             "email": "poltorak.dariusz@gmail.com"
+        },
+        {
+            "name": "Happy Endians",
+            "homepage": "http://happyendians.pl"
         }
     ],
     "minimum-stability": "dev"

@@ -3,7 +3,17 @@
 Slug generator with accent folding for Silverstripe CMS
 
 This module will provide better text to slug translation for silverstripe by replacing very basic transliterator with cocur/slugify module:
+https://github.com/cocur/slugify
 
+## Installation:
+
+````
+  composer require dariuszp/silverstripe-betterslug
+  // or if you have .phar package
+  ./composer.phar require dariuszp/silverstripe-betterslug
+````
+
+## Usage
 
 When you create page with title like this:
 ````
