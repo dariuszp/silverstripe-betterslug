@@ -1,18 +1,20 @@
 <?php
 
-class BetterSlug extends Object {
+class BetterSlug extends Object
+{
 
     /**
      * @var Cocur_Slugify
      */
     protected static $slugify;
 
-    public function toASCII($source) {
+    public function toASCII($source)
+    {
         if (!self::$slugify) {
             self::$slugify = new Cocur_Slugify('/([^A-Za-z0-9\.]|-)+/');
             $rulesets = $this->config()->get('rulesets');
             if (is_array($rulesets)) {
-                foreach($rulesets as $name => $ruleset) {
+                foreach ($rulesets as $name => $ruleset) {
                     if (!is_array($ruleset)) {
                         throw new \Exception('Ruleset must by an array');
                     }
@@ -26,10 +28,8 @@ class BetterSlug extends Object {
                     }
                 }
             }
-
         }
 
         return self::$slugify->slugify($source);
     }
-
 }
