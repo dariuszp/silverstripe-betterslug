@@ -1,3 +1,3 @@
 <?php
 
-Object::useCustomClass('SS_Transliterator', 'BetterSlug');
+Object::useCustomClass('SS_Transliterator', 'ExtendedTransliterator');
