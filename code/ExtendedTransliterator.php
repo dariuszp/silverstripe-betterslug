@@ -834,6 +834,23 @@ class ExtendedTransliterator extends Object
             'Ỷ' => 'Y',
             'Ỹ' => 'Y',
         );
+
+        $rulesets = $this->config()->get('rulesets');
+        if (is_array($rulesets)) {
+            foreach ($rulesets as $name => $ruleset) {
+                if (!is_array($ruleset)) {
+                    throw new \Exception('Ruleset must by an array');
+                }
+                if (!(isset($ruleset['map']) && is_array($ruleset['map']))) {
+                    throw new \Exception('Ruleset map must be an array');
+                }
+                $isActive = (isset($ruleset['active']) && $ruleset['active']) ? true : false;
+                if ($isActive) {
+                    $table = array_merge($table, $ruleset['map']);
+                }
+            }
+        }
+
         return strtr($source, $table);
     }
 
